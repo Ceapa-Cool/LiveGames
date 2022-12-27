@@ -16,11 +16,13 @@
         },
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": "pixels/tsconfig.json"
+        "project": ["./tsconfig.json"]
     },
     "plugins": [
         "react",
         "@typescript-eslint"
     ],
-    "rules": {}
+    "rules": {
+        "react/function-component-definition": [2, { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }]
+    }
 }
