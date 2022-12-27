@@ -23,6 +23,30 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "@typescript-eslint/naming-convention": [
+            2,
+            {
+                "selector": "default",
+                "format": ["snake_case"],
+                "leadingUnderscore": "allow",
+                "trailingUnderscore": "forbid"
+            },
+            {
+                "selector": "variable",
+                "format": ["snake_case", "UPPER_CASE", "PascalCase"],
+                "modifiers": ["const"]
+            },
+            {
+                "selector": "typeLike",
+                "format": ["PascalCase"]
+            },
+            {
+                "selector": "function",
+                "format": ["snake_case", "PascalCase"]
+            }
+        ],
+        "camelcase": "off",
+        "max-len": [2, 100],
         "react/function-component-definition": [2, { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }]
     }
 }
